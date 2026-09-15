@@ -90,6 +90,29 @@ cv2.rectangle(imagen_mondrian,(0,500),(200,650),(255,255,0),-1)
 
 ## Píxel más claro y oscuro
 
+Se ha utilizado la cámara del dispositivo para analizar cada fotograma. Para comenzar, se inicializa la captura de vídeo mediante:  
 
+```
+vid = cv2.VideoCapture(0)
+```
+
+Posteriormente, mediante un bucle while, se capturan los fotogramas de la cámara y se obtiene su alto y ancho para poder recorrer todos los píxeles.
+
+Para encontrar los píxeles más claro y más oscuro se utilizan dos bucles for, recorriendo todos los píxeles fotograma. Para determinar la claridad de cada píxel se suman los valores de sus tres canales de color:
+
+```
+claridad = int(pixel[0]) + int(pixel[1]) + int(pixel[2])
+```
+
+Es importante pasar los valores BGR al tipo int para que el máximo de la suma no sea 255 sino que sea 765. Una vez obtenida la suma, se compara la claridad de cada píxel con los valores almacenados anteriormente. Si el valor es mayor que "Mas_claro", se actualizan las coordenadas del píxel más claro. Del mismo modo, si es menor que "Mas_oscuro", se actualizan las coordenadas del píxel más oscuro.
+
+Una vez encontrados ambos píxeles, se marcan sus posiciones mediante dos círculos:
+
+```
+cv2.circle(frame, (x_claro, y_claro), 10, (0, 0, 255), 2)
+cv2.circle(frame, (x_oscuro, y_oscuro), 10, (255, 0, 0), 2)
+```
+
+Finalmente, se muestra el fotograma con las posiciones marcadas y el programa continúa realizando el proceso hasta que se pulsa la tecla ESC.
 
 ## Pop art
