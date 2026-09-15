@@ -123,4 +123,10 @@ Finalmente, se muestra el fotograma con las posiciones marcadas y el programa co
 
 <br>
 
+Se puede observar que el círculo rojo detecta una única zona con la claridad más alto. Por otro lado, el círculo azul detecta muchas zonas con la claridad mas baja posible (755) y por eso cada vez que se muestra un fotograma este círculo aparece en posiciones diferentes.
+
+El programa funciona "a saltos" debido a la gran cantidad de cálculos que debe hacer. Esto ocurre porque la camara captura un video de tamaño 480x640 lo que da un total de 307200 pixeles por fotograma y, para cada píxel, calcula la intensidad y lo compara con las intensidades mas claras y oscuras.
+
+Una manera de acelerar el proceso podría ser disminuir el número de píxeles que se recorren en los bucles "for" a la mitad.
+
 ## Pop art
