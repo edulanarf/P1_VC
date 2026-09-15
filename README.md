@@ -132,3 +132,4 @@ Una manera de acelerar el proceso podría ser disminuir el número de píxeles q
 ## Pop art
 
 Para esta tarea hemos cogido la inspiración de la famosa interpretación de Andy Warhol de Marilyn Monroe y en fotos encontramos el popart de Obama conocido cono "hope" e intentamos recrearlo según la escala de grises.
+
