@@ -115,10 +115,12 @@ cv2.circle(frame, (x_oscuro, y_oscuro), 10, (255, 0, 0), 2)
 
 Finalmente, se muestra el fotograma con las posiciones marcadas y el programa continúa realizando el proceso hasta que se pulsa la tecla ESC.
 
-<br> 
-  <p align="center">
-    <img src="Imagenes/clarooscuro.JPG" alt="Pixel mas claro y oscuro" width="500">
-  </p>
+<br>
+
+<p align="center">
+  <img src="Imagenes/pixelclaroyoscuro.gif" alt="Pixel Claro y Oscuro" width="500">
+</p>
+
 <br>
 
 ## Pop art
