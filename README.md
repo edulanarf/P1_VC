@@ -62,6 +62,34 @@ tablero[fila * casilla:(fila + 1) * casilla, columna * casilla:(columna + 1) * c
 
 ## Mondrian
 
+Primero se crea una imagen con fondo blanco:
+
+```
+imagen_mondrian = np.ones((alto,ancho,3), dtype = np.uint8) * 255
+```  
+
+Seguido de esto, se dibujan las líneas verticales y horizontales:
+
+```
+cv2.line(imagen_mondrian,(100,0),(100,500),(0,0,0),20)
+...
+```
+
+Y por último se dibujan los rectángulos dentro de los huecos formados por las líneas verticales y horizontales:
+
+```
+cv2.rectangle(imagen_mondrian,(0,500),(200,650),(255,255,0),-1)
+...
+```
+
+<br> 
+  <p align="center">
+    <img src="Imagenes/mondrian.png" alt="Mondrian" width="500">
+  </p>
+<br>
+
 ## Píxel más claro y oscuro
+
+
 
 ## Pop art
