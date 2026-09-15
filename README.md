@@ -12,19 +12,53 @@
 
 En esta tarea se ha realizado un tablero de ajedrez utilizando una medida de 800 de largo y 800 de ancho, teniendo cada casilla un tamaño de 100x100. Una vez establecida la medida se procede con el método que crea una matriz de ceros con dicha medida:  
   
-**np.zeros((medida,medida,1), dtype = np.uint8)**  
+```
+np.zeros((medida,medida,1), dtype = np.uint8)
+```  
   
 Al ser creadas con ceros nos aseguramos que toda la imagen tenga un color negro y lo que se hará a continuación será rellenar con cuadrados blancos de tamaño 100x100 en los huecos correspondientes, "ahorrando" pintar los cuadrados negros al ser el fondo de dicho color.  
 Recorremos la imagen mediante 2 bucles **for** con rango 8 cada uno (8x8= 64 casillas del tablero) buscando las posiciones en donde **i+j** es par y pintando estas de color blanco, asignando el valor 255:  
 
-**img_tarea[100*i:100*(i+1),100*j:100*(j+1)] = 255**  
+```
+img_tarea[100*i:100*(i+1),100*j:100*(j+1)] = 255
+```
   
 Los rangos utilizados permiten seleccionar un área de 100 × 100 píxeles para cada casilla. Finalmente, se muestra la imagen utilizando una escala de grises en donde el valor mínimo establecido será 0 y el máximo 255. De este modo el valor 0 sería el negro y el valor 255 el blanco:  
   
-**plt.imshow(img_tarea, cmap='gray',vmin=0, vmax=255)**  
-**plt.show()**  
-  
+```
+plt.imshow(img_tarea, cmap='gray',vmin=0, vmax=255)
+plt.show()
+```
+
+**Tablero de Ajedrez sin IA:**  
+
+<br> 
+  <p align="center">
+    <img src="Imagenes/tableroajedreznoIA.png" alt="Tablero de ajedrez" width="500">
+  </p>
+<br>
+
 ### Versión con IA:
+
+A diferencia de la versión sin IA, esta ha optado por crear una imagen inicial blanca en vez de negra por lo que la única diferencia es la condición de los bucles. Esta condición es lo contrario a la versión sin IA. Trata de buscar las sumas de los índices (fila + columna) que son igual a 1, es decir, las que son impares:  
+
+```
+if (fila + columna) % 2 == 1
+```
+
+Una vez encontrada dicha suma, se procede a pintar un cuadrado negro de tamaño 100x100 a partir de los índices de la iteración:  
+
+```
+tablero[fila * casilla:(fila + 1) * casilla, columna * casilla:(columna + 1) * casilla] = 0
+```  
+
+**Tablero de Ajedrez con IA:**  
+
+<br> 
+  <p align="center">
+    <img src="Imagenes/tableroajedrezIA.png" alt="Tablero de ajedrez" width="500">
+  </p>
+<br>
 
 ## Mondrian
 
