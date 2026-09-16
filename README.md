@@ -6,7 +6,7 @@ Repositorio oficial para el almacenamiento, desarrollo y entrega de las **práct
 
 Las prácticas se organizan de forma modular en directorios independientes. Cada carpeta incluye su propio código fuente, recursos y documentación o informe correspondiente:
 
-* `Práctica/`
+*  **[Práctica 1 (P1)](./P1/)** - Introducción a OpenCV y procesamiento básico de imágenes.
 
 Realizado por:
 - Eduardo Arbelo Rua-Figueroa
