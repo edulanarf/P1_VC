@@ -1,4 +1,4 @@
-# Visión por Computador 👁️‍🗨️
+# Visión por Computador
 
 Repositorio oficial para el almacenamiento, desarrollo y entrega de las **prácticas** de la asignatura de **Visión por Computador**.
 
